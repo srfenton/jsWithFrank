@@ -55,3 +55,20 @@
 // displayMiddleCharacter('enthusiastically')
 
 
+//07-16-2024
+//Create a function that randomly prints  a color that the function is run.
+// function randomColor(){
+//     let colors = ['red', 'orange','green', 'blue', 'indigo', 'violet']
+    
+//     return colors[Math.floor(Math.random()*colors.length)]go
+// }
+
+// console.log(randomColor())  
+// console.log(randomColor())  
+// console.log(randomColor())  
+// console.log(randomColor())  
+// console.log(randomColor())  
+// console.log(randomColor())  
+//we also discussed old fashioned for loops using a while loop, and for...in...
+//i learned that keys are ordered and we can call the Object.keys() method to access their index number
+//cool stuff
