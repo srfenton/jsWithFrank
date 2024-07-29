@@ -120,3 +120,23 @@
 // const resultArray11=[...arrayOne,...arrayTwo]
 // const myResult11=resultArray11.filter(differenece=> !(arrayOne.includes(differenece)&& arrayTwo.includes(differenece)))
 // console.log(myResult11)
+
+// function symmetricDifference(array1, array2){
+//     let solution = [];
+//     let array1Copy = [...array1];
+//     let array2Copy = [...array2];
+//     array1Copy = array1Copy.filter(item => !array2.includes(item));
+//     array2Copy = array2Copy.filter(item => !array1.includes(item));
+
+//     array1Copy.forEach(element => {
+//         solution.push(element);
+//     });
+//     array2Copy.forEach(element => {
+//         solution.push(element);
+//     });
+    
+//     return solution;
+// }
+
+
+// console.log(symmetricDifference([2,3,5],[1,2,5]));
