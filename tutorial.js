@@ -1,4 +1,4 @@
-//06-25/2024
+//06-25-2024
 //we talked about logical operators and switch statements 
 // Create a function that loops from one to 100 but print  numbers between 50 and 72
 // function twiceTheRemainder(firstNumber, secondNumber, thirdNumber, divisor){
@@ -72,3 +72,51 @@
 //we also discussed old fashioned for loops using a while loop, and for...in...
 //i learned that keys are ordered and we can call the Object.keys() method to access their index number
 //cool stuff
+
+
+//07-29-24
+// you will be provided with an initial array as the first argument to the destroyer function, followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+// The function must accept an indeterminate number of arguments, also known as a variadic function. You can access the additional arguments by adding a rest parameter to the function definition or using the arguments object.
+//destroyer([1, 2, 3, 1, 2, 3], 2, 3) should return [1, 1].
+
+// //my attempt
+// function destroyer(array, arg){
+//     for(let i = 0; i < array.length; i++) {
+//         if(array[i]===arg){
+//         array.splice(i,1)    
+//         }
+//     }
+
+//     console.log(array);
+
+//     };
+
+// destroyer([1, 2, 3, 1, 2, 3], 2)
+
+
+
+// //solution
+// function destroyer(arr, ...valsToRemove) {
+//     return arr.filter(item => !valsToRemove.includes(item));
+//     }
+
+//Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
+// example comparing the  the two arrays [2,3,5] and[1,2,5 ] their differences will be [1,3]
+
+//my attempt
+// function symmetricDifference(array1, array2){
+//     let solution = [];
+//     let array1Copy = [...array1];
+//     let array2Copy = [...array2];
+//     solution.push(array1Copy.filter(item => !array2.includes(item))[0]);
+//     solution.push(array2Copy.filter(item => !array1.includes(item))[0]);
+//     // console.log(array1Copy);
+//     // console.log(array2Copy);
+//     return solution
+// }
+// console.log(symmetricDifference([2,3,5],[1,2,5]))
+
+// //franks solution
+// const resultArray11=[...arrayOne,...arrayTwo]
+// const myResult11=resultArray11.filter(differenece=> !(arrayOne.includes(differenece)&& arrayTwo.includes(differenece)))
+// console.log(myResult11)
