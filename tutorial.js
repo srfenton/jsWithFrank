@@ -121,6 +121,7 @@
 // const myResult11=resultArray11.filter(differenece=> !(arrayOne.includes(differenece)&& arrayTwo.includes(differenece)))
 // console.log(myResult11)
 
+// //my attempt corrected
 // function symmetricDifference(array1, array2){
 //     let solution = [];
 //     let array1Copy = [...array1];
@@ -140,3 +141,38 @@
 
 
 // console.log(symmetricDifference([2,3,5],[1,2,5]));
+
+//8-6-2024
+//Create a function  that  accepts words that  starts  and ends with uppercase letters.
+function caseChecker(word){
+    // console.log(word[0]); //for testing
+    // console.log(word[word.length-1]); //for testing
+    if (word[0].toUpperCase() === word[0] && word[word.length-1].toUpperCase() === word[word.length-1]){
+        
+        return true
+    } else{
+        
+        return false
+    }
+
+}
+
+// console.log(caseChecker('PeetsY'))
+// console.log(caseChecker('FranK'))
+// console.log(caseChecker('Car'))
+// console.log(caseChecker('alarM'))
+// console.log(caseChecker('stop'))
+// console.log(caseChecker('FINALTEST'))
+
+
+let stringExample = 'test';
+let backtic = `i am having a ${stringExample}`
+// console.log(stringExample.indexOf('e'))
+// console.log(stringExample.charAt(3))
+// console.log(stringExample.split(''))
+// let split = stringExample.split('')
+// console.log(split.join(''))
+// console.log(stringExample.startsWith('o'))
+// console.log(stringExample.includes('test1'))
+// console.log(stringExample.repeat())
+// console.log(stringExample.replace('test','javascript'))
