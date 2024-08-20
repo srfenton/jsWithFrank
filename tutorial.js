@@ -6,6 +6,7 @@
 //     remainder= sum / divisor
 //     console.log(sum is ${sum})
 //     console.log(remainder is ${remainder})
+
     
 //     return  sum == (2*remainder)
     
@@ -100,6 +101,7 @@
 //     return arr.filter(item => !valsToRemove.includes(item));
 //     }
 
+
 //Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
 // example comparing the  the two arrays [2,3,5] and[1,2,5 ] their differences will be [1,3]
 
@@ -144,18 +146,18 @@
 
 //8-6-2024
 //Create a function  that  accepts words that  starts  and ends with uppercase letters.
-function caseChecker(word){
-    // console.log(word[0]); //for testing
-    // console.log(word[word.length-1]); //for testing
-    if (word[0].toUpperCase() === word[0] && word[word.length-1].toUpperCase() === word[word.length-1]){
+// function caseChecker(word){
+//     // console.log(word[0]); //for testing
+//     // console.log(word[word.length-1]); //for testing
+//     if (word[0].toUpperCase() === word[0] && word[word.length-1].toUpperCase() === word[word.length-1]){
         
-        return true
-    } else{
+//         return true
+//     } else{
         
-        return false
-    }
+//         return false
+//     }
 
-}
+// }
 
 // console.log(caseChecker('PeetsY'))
 // console.log(caseChecker('FranK'))
@@ -165,8 +167,8 @@ function caseChecker(word){
 // console.log(caseChecker('FINALTEST'))
 
 
-let stringExample = 'test';
-let backtic = `i am having a ${stringExample}`
+// let stringExample = 'test';
+// let backtic = `i am having a ${stringExample}`
 // console.log(stringExample.indexOf('e'))
 // console.log(stringExample.charAt(3))
 // console.log(stringExample.split(''))
@@ -176,3 +178,30 @@ let backtic = `i am having a ${stringExample}`
 // console.log(stringExample.includes('test1'))
 // console.log(stringExample.repeat())
 // console.log(stringExample.replace('test','javascript'))
+
+//08-19-2024
+// Find the missing letter in the passed letter range and return it.
+// If all letters are present in the range, return undefined.
+// fearNotLetter("abce") should return the string d.
+
+// function fearNotLetter(passsedLetterRange){
+//     let missingCharacter;
+
+    
+//     for(let i = 1; i < passsedLetterRange.length; i++){
+//         let currentCharCode = passsedLetterRange.charCodeAt(i)
+//         let previousCharCode = passsedLetterRange.charCodeAt(i - 1);
+//         if(currentCharCode !== previousCharCode + 1){
+//             missingCharacter = String.fromCharCode(previousCharCode + 1); //convert the char code back to a string
+//             break;
+//         } 
+
+//     }
+
+//     return missingCharacter;
+// }
+
+// console.log(fearNotLetter('abce'));
+// console.log(fearNotLetter('abcde'));
+
+//We also briefly discussed the DOM and using it to perform some actions client side. This is coming at a great time since I could really use this to lessen server traffice for my japanese vocabulary program.
