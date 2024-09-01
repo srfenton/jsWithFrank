@@ -205,3 +205,6 @@
 // console.log(fearNotLetter('abcde'));
 
 //We also briefly discussed the DOM and using it to perform some actions client side. This is coming at a great time since I could really use this to lessen server traffice for my japanese vocabulary program.
+
+//08-31-2024
+//Create a code using DOM that creates a strike through a word when a button is clicked. (see tutorial.html for implementation)

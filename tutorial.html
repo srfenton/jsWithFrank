@@ -4,12 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      #text {
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .strikethrough {
+        text-decoration: line-through;
+      }
+    </style>
 </head>
 <body>
-<div id="myDiv">Hello, World!</div>
-<script>
+
+<!-- <div id="myDiv">Hello, World!</div> -->
+<!-- <script>
   const myDiv = document.getElementById("myDiv");
   console.log(myDiv.textContent); // Outputs: Hello, World!
+</script> -->
+
+<!-- Create a code using DOM that creates a strike through a word when a button is clicked. -->
+<h1 id="text">This is a simple sentence</h1>
+<button id="button">Click Me!</button> 
+
+<script>
+  const myButton = document.getElementById('button');
+  const text = document.getElementById('text')
+    myButton.addEventListener('click', ()=>{
+      text.classList.toggle('strikethrough')
+      text.addEventListener('click', ()=> {
+        let currentSize = window.getComputedStyle(text).fontSize;
+        let newSize = parseInt(currentSize)+2;
+        text.style.fontSize = newSize+'px';
+      })
+    })
 </script>
+
 </body>
 </html>
