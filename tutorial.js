@@ -208,3 +208,21 @@
 
 //08-31-2024
 //Create a code using DOM that creates a strike through a word when a button is clicked. (see tutorial.html for implementation)
+
+
+//09-14-2024
+//given an array of objects[{ frank: 50},{bob:20}, {dada:200}]
+//with all the numbers attached to the names which represents the  number of shares they have in a company. if the total share is $400
+//create a code that updates their percentages in their respective objects
+
+const shareholders = [{ frank: 50 }, { bob: 20 }, { dada: 200 }];
+const totalShares = 400;
+const updatedShareholders = shareholders.map((shareholder) => {
+const name = Object.keys(shareholder)[0];
+const shares = shareholder[name];
+const percentage = (shares / totalShares) * 100;
+return { [name]: shares, percentage: `${percentage.toFixed(2)}%` };
+});
+
+console.log(updatedShareholders);
+
