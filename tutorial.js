@@ -215,14 +215,23 @@
 //with all the numbers attached to the names which represents the  number of shares they have in a company. if the total share is $400
 //create a code that updates their percentages in their respective objects
 
-const shareholders = [{ frank: 50 }, { bob: 20 }, { dada: 200 }];
-const totalShares = 400;
-const updatedShareholders = shareholders.map((shareholder) => {
-const name = Object.keys(shareholder)[0];
-const shares = shareholder[name];
-const percentage = (shares / totalShares) * 100;
-return { [name]: shares, percentage: `${percentage.toFixed(2)}%` };
-});
+// const shareholders = [{ frank: 50 }, { bob: 20 }, { dada: 200 }];
+// const totalShares = 400;
+// const updatedShareholders = shareholders.map((shareholder) => {
+// const name = Object.keys(shareholder)[0];
+// const shares = shareholder[name];
+// const percentage = (shares / totalShares) * 100;
+// return { [name]: shares, percentage: `${percentage.toFixed(2)}%` };
+// });
 
-console.log(updatedShareholders);
+// console.log(updatedShareholders);
 
+//09-28-2024
+//many people pass over session management but it is extremely important for security
+//json web token to generate user information in the form of gibberish
+//bcrypt to salt & hash data stored permananently in the database
+//crytpo to generate tokens for each request and store most recent token in the db
+//when the server receieves a request from the user, it will ask for the xsrf token and check the most recent token in the db
+//if  the token recieved from the user matches the one in the database, it will return the request successfully and a generate a new token
+//tokens should be classified by permissions. the database will store access control matrix.
+//next class we will talk about how permissions and tokens interact with each other vis a vis rendering content discriminately 
