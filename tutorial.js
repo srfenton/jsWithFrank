@@ -235,3 +235,8 @@
 //if  the token recieved from the user matches the one in the database, it will return the request successfully and a generate a new token
 //tokens should be classified by permissions. the database will store access control matrix.
 //next class we will talk about how permissions and tokens interact with each other vis a vis rendering content discriminately 
+
+
+//11-09/2024
+//second lesson back from honeymoon. Last week, discussed some high level concepts, chatGPT programming woes and caught up. 
+//this week, we discussed more about sessions, cookies and tokens. We set up an npm for a little express application which we will discuss more next week.
