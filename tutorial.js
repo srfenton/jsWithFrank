@@ -237,6 +237,8 @@
 //next class we will talk about how permissions and tokens interact with each other vis a vis rendering content discriminately 
 
 
-//11-09/2024
+//11-09-2024
 //second lesson back from honeymoon. Last week, discussed some high level concepts, chatGPT programming woes and caught up. 
 //this week, we discussed more about sessions, cookies and tokens. We set up an npm for a little express application which we will discuss more next week.
+//11-16-2024
+//more session work this week. The new server.js application will take a username and password defined in the url and return the session info to the user by using the /login route.

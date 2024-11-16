@@ -37,28 +37,42 @@ res.send("You are not logged in.");
 });
 
 // Login route
-app.post("/login", (req, res) => {
-const { username, password } = req.body;
+app.get("/login", (req, res) => {
+    const { username, password } = req.query;
+    if (users[username] && users[username] === password) {
+    req.session.user = username;
+    const token = jwt.sign({ user: username }, JWT_SECRET, { expiresIn: "1h" });
+    res.json({
+    message: `Welcome, ${username}. You are now logged in!`,
+    session: req.session.user,
+    jwt: token,
+    });
+    } else {
+    res.status(401).send("Invalid credentials. Please try again.");
+    }
+    });
+    // http://localhost:3000/login?username=user1&password=password1
 
-// Check if the user exists and password matches
-if (users[username] && users[username] === password) {
-req.session.user = username; // Save the username in session
-const token = jwt.sign({ user: username }, JWT_SECRET, { expiresIn: "1h" }); // Generate JWT
-res.json({ message: `Welcome, ${username}. You are now logged in!`, session: req.session.user, jwt: token });
-} else {
-res.status(401).send("Invalid credentials. Please try again.");
-}
-});
 
 // Logout route
-app.post("/logout", (req, res) => {
-req.session.destroy((err) => {
-if (err) {
-return res.status(500).send("Error logging out.");
-}
-res.send("You are logged out.");
-});
-});
+// app.post("/logout", (req, res) => {
+// req.session.destroy((err) => {
+// if (err) {
+// return res.status(500).send("Error logging out.");
+// }
+// res.send("You are logged out.");
+// });
+// });
+
+app.get("/logout", (req, res) => {
+    req.session.destroy((err) => {
+    if (err) {
+    return res.status(500).send("Error logging out.");
+    }
+    res.send("You are logged out.");
+    });
+    });
+
 
 // Route to check if the user is logged in
 app.get("/profile", (req, res) => {
