@@ -242,3 +242,37 @@
 //this week, we discussed more about sessions, cookies and tokens. We set up an npm for a little express application which we will discuss more next week.
 //11-16-2024
 //more session work this week. The new server.js application will take a username and password defined in the url and return the session info to the user by using the /login route.
+
+
+//11-23-2024
+//today we are talking about request objects
+// app.use(express.json());
+// app.post("/login", (req, res) => {
+// console.log(req.body); // { username: 'user', password: 'pass' }
+// });
+
+// //extract information from form
+
+
+// app.get("/search", (req, res) => {
+//     console.log(req.query); // { term: 'express' }
+//     });
+//get argument from client
+
+// example: GET /search?term=express
+
+app.get("/user/:id", (req, res) => {
+    console.log(req.params); // { id: '123' }
+    });
+// the above code will console.log() and object where the :id is the key and the parameter in the argument is printed out
+
+
+// app.get("/headers", (req, res) => {
+//     console.log(req.headers["user-agent"]); // Logs the browser or tool used
+//     });
+
+//logs the user's browser information, OS, sys architecture, etc
+
+// app.use((req, res) => {
+//     console.log(req.method); // Logs the HTTP method
+//     });

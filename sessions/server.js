@@ -19,6 +19,21 @@ cookie: { maxAge: 60000 }, // Session expiration time in milliseconds (1 minute 
 // Middleware to parse JSON and URL-encoded form data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// app.use((req, res) => {
+//     console.log(req.method); // Logs the HTTP method
+//     });
+
+// app.use((req, res) => {
+//     console.log(req.path); // Logs '/about' from '/about?user=1'
+//     });
+
+// app.use((req, res) => {
+//     console.log(req.protocol); // 'http' or 'https'
+//     });
+
+// app.use((req, res) => {
+//     console.log(req.ip); // Logs the client's IP address
+//     });
 
 // Simple "database" of users for demonstration purposes
 const users = {
@@ -74,6 +89,7 @@ app.get("/logout", (req, res) => {
     });
 
 
+
 // Route to check if the user is logged in
 app.get("/profile", (req, res) => {
 if (req.session.user) {
@@ -83,6 +99,23 @@ res.json({ message: `Hello, ${req.session.user}. Welcome to your profile page.`,
 res.status(401).send("Please log in to view this page.");
 }
 });
+
+app.get("/search", (req, res) => {
+    console.log(req.query); // { term: 'express' }
+    });
+// example: GET /search?term=express
+//get argument from client
+
+app.get("/user/:id", (req, res) => {
+    console.log(req.params); // { id: '123' }
+    });
+
+
+app.get("/headers", (req, res) => {
+    console.log(req.headers["user-agent"]); // Logs the browser or tool used
+    });
+
+
 
 // Start the server
 app.listen(PORT, () => {
