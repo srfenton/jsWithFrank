@@ -261,9 +261,9 @@
 
 // example: GET /search?term=express
 
-app.get("/user/:id", (req, res) => {
-    console.log(req.params); // { id: '123' }
-    });
+// app.get("/user/:id", (req, res) => {
+//     console.log(req.params); // { id: '123' }
+//     });
 // the above code will console.log() and object where the :id is the key and the parameter in the argument is printed out
 
 
@@ -276,3 +276,34 @@ app.get("/user/:id", (req, res) => {
 // app.use((req, res) => {
 //     console.log(req.method); // Logs the HTTP method
 //     });
+
+//12/28/2024
+function fetchDataS() {
+    try {
+    const response = setTimeout(() => console.log("Data fetched successfully"), 2000);
+    // console.log(response);
+    console.log("Processing data");
+    
+    } catch (error) {
+    console.error(error);
+    }
+    }
+async function fetchDataA() {
+    try {
+    const response = await new Promise((resolve, reject) => {
+    setTimeout(() => resolve("Data fetched successfully"), 2000);
+    });
+    
+    
+    console.log(response);
+    console.log("Processing data");
+    
+    } catch (error) {
+    console.error(error);
+    }
+    }
+        
+    fetchDataS();
+    fetchDataA();
+
+    
